@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>入力</title>
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="/jquery/jquery.js"></script>
+	</head>
+	<body>
+		<div class = "container2">
+		<ul class = "category">
+			<a href="/" text-decoration="none"><li class="toplist">入力</li></a>
+			<a href="/ref" text-decoration="none"><li class="toplist">参照</li></a>
+			<li class="toplist">？？</li>
+		</ul>
+		</div>
+		<%- include("today.ejs", data) %>
+		<!--             電卓 -->
+		<%- include("calc.ejs") %>
+	</body>
+</html>

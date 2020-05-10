@@ -1,0 +1,22 @@
+<span style="display:none">
+	<%= total = skhtotal + lfgtotal + zptotal %>
+</span>
+<div align="center">
+	<table border="1" style="text-align:right">
+		<tr><th>カテゴリ</th><th>金額</th><th>割合</th><th>1日平均</th></tr>
+		<tr><td>食費</td><td><%= skhtotal.toLocaleString() %>円</td><td><%= Math.floor((skhtotal / total) * 100) %>%</td><td><%= Math.floor(skhtotal / date).toLocaleString() %>円</td></tr>
+		<tr><td>生活費</td><td><%= lfgtotal.toLocaleString() %>円</td><td><%= Math.floor((lfgtotal / total) * 100) %>%</td><td><%= Math.floor(lfgtotal / date).toLocaleString() %>円</td></tr>
+		<tr><td>雑費</td><td><%= zptotal.toLocaleString() %>円</td><td><%= Math.floor((zptotal / total) * 100) %>%</td><td><%= Math.floor(zptotal / date).toLocaleString() %>円</td></tr>
+		<tr><td>合計</td><td><%= total.toLocaleString() %>円</td><td style="text-align:center">/</td><td><%= Math.floor(total / date).toLocaleString() %>円</td></tr>
+	</table>
+</div>
+<div align="center" style="margin: 50px auto">
+<% for (i=1; i<=31; i++) { %>
+	<% if (i < 10) { %>
+		<a href="<%= month %>-0<%= i %>"><%= month %>-0<%= i %></a>
+	<% } else { %>
+		<a href="<%= month %>-<%= i %>"><%= month %>-<%= i %></a>
+	<% } %>
+	<br>
+<% } %>
+</div>

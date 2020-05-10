@@ -1,0 +1,8 @@
+<div align="center">
+<table border="1">
+<tr><th>ID</th><th>値段</th><th>カテゴリ</th><th>日時</th><th>メモ</th></tr>
+<% for (let item of data) { %>
+<tr><td><%= item.id %></td><td><%= item.nedan %></td><td><%= item.category %></td><td><%= item.time %></td><td><%= item.memo %></td></tr>
+<% } %>
+</table>
+</div>
